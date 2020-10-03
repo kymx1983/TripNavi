@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>TripNavi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="">
+<head>
+  <title>MyIssueList</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<header>
+  <ul>
+    <% if @current_user %>
+      <li><%= link_to("#{@current_user.user_name} さん", "/user/show/#{@current_user.id}") %></li>
+      <li><%= link_to("Logout", "/logout/", {method: :post}) %></li>
+    <% else %>
+      <li><%= link_to("Login", "/login") %></li>
+    <% end %>
+    <li><%= link_to("Post", "/") %></li>
+    <li><%= link_to("Report", "/") %></li>
+    <li><%= link_to("Issue", "/") %></li>
+    <li><%= link_to("Note", "/") %></li>
+    <li><%= link_to("Memo", "/") %></li>
+    <li><%= link_to("Task", "/task/index") %></li>
+    <li><%= link_to("Top", "/") %></li>
+  </ul>
+</header>
+<%= yield %>
+</body>
 </html>
