@@ -13,27 +13,20 @@ git push -u origin master
 ```
 
 # サーバ起動
-```
+```shell script
 rails server
 ```
 
 # スポットの登録
 
 ## コントローラ作成
-```
+```shell script
 rails generate controller Spot index show new
 ````
 
 ## タスクモデル作成
-```
-rails generate model Task title:string content:text limit_date:date status:integer
-Running via Spring preloader in process 29902
-      invoke  active_record
-      create    db/migrate/20200815125143_create_tasks.rb
-      create    app/models/task.rb
-      invoke    test_unit
-      create      test/models/task_test.rb
-      create      test/fixtures/tasks.yml
+```shell script
+rails generate model Spot title:string content:text spot_address:text category:integer
 ```
 
 ```shell script
