@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "spot/destroy/:id" => "spot#destroy"
   get "post/show/:id" => "post#show"
   get "post/edit/:id" => "post#edit"
+  get "post/destroy/:id" => "post#destroy"
   post "spot/create"
   post "spot/update"
   post "post/create"

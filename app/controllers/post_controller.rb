@@ -33,4 +33,11 @@ class PostController < ApplicationController
       render("post/edit")
     end
   end
+
+  def destroy
+    @post = Post.find_by(id:params[:id])
+    @post.destroy
+
+    redirect_to("/spot/index")
+  end
 end
