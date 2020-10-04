@@ -23,4 +23,8 @@ class SpotController < ApplicationController
       render("spot/new")
     end
   end
+
+  def edit
+    @spot = Spot.find_by(id:params[:id])
+  end
 end
