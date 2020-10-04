@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'post/new'
+  get 'post/edit'
   get 'spot/index'
   get "spot/show/:id" => "spot#show"
   get "spot/edit/:id" => "spot#edit"

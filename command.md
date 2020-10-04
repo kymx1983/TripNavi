@@ -24,7 +24,7 @@ rails server
 rails generate controller Spot index show new
 ````
 
-## タスクモデル作成
+## スポットモデル作成
 ```shell script
 rails generate model Spot title:string content:text spot_address:text category:integer
 ```
@@ -33,28 +33,11 @@ rails generate model Spot title:string content:text spot_address:text category:i
 rails db:migrate
 ```
 
-# コメント
+# 投稿
 
-## コメントコントローラ
+## 投稿コントローラ
 ```shell script
-rails generate controller Comment new edit
-Running via Spring preloader in process 2481
-      create  app/controllers/comment_controller.rb
-       route  get 'comment/new'
-get 'comment/edit'
-      invoke  erb
-      create    app/views/comment
-      create    app/views/comment/new.html.erb
-      create    app/views/comment/edit.html.erb
-      invoke  test_unit
-      create    test/controllers/comment_controller_test.rb
-      invoke  helper
-      create    app/helpers/comment_helper.rb
-      invoke    test_unit
-      invoke  assets
-      invoke    scss
-      create      app/assets/stylesheets/comment.scss
-
+rails generate controller Post new edit
 ```
 
 ## コメントモデル作成
