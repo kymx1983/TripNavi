@@ -29,6 +29,10 @@
     <br>
     <div class="form-group">
       <h2><label>投稿:</label></h2>
+      <wrap class="btn btn-flat-border">
+        <%= link_to("新規投稿", "/post/new") %>
+      </wrap>
+      <br><br>
       <% @posts.each do |post| %>
         <div><%= post.content %></div>
         <hr>
