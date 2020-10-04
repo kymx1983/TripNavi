@@ -40,4 +40,11 @@ class SpotController < ApplicationController
       render("spot/edit")
     end
   end
+
+  def destroy
+    @spot = Spot.find_by(id:params[:id])
+    @spot.destroy
+
+    redirect_to("/spot/index")
+  end
 end
