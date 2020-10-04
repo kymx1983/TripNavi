@@ -27,4 +27,17 @@ class SpotController < ApplicationController
   def edit
     @spot = Spot.find_by(id:params[:id])
   end
+
+  def update
+    @spot = Spot.find_by(id:params[:id])
+
+    @spot.title = params[:title]
+    @spot.content = params[:content]
+
+    if @spot.save
+      redirect_to('/spot/index')
+    else
+      render("spot/edit")
+    end
+  end
 end
