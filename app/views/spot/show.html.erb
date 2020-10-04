@@ -24,5 +24,17 @@
     <wrap class="btn btn-flat-border">
       <%= link_to("削除", "/spot/destroy/#{@spot.id}") %>
     </wrap>
+
+    <hr>
+    <br>
+    <div class="form-group">
+      <h2><label>投稿:</label></h2>
+      <% @posts.each do |post| %>
+        <div><%= post.content %></div>
+        <hr>
+      <% end %>
+
+    </div>
+
   </div>
 </div>

@@ -5,6 +5,7 @@ class SpotController < ApplicationController
 
   def show
     @spot = Spot.find_by(id:params[:id])
+    @posts = Post.all
   end
 
   def new
