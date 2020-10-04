@@ -40,17 +40,9 @@ rails db:migrate
 rails generate controller Post new edit
 ```
 
-## コメントモデル作成
+## 投稿モデル作成
 ```shell script
-rails generate model Comment type:integer type_id:integer comment:text
-Running via Spring preloader in process 2697
-      invoke  active_record
-      create    db/migrate/20200815155800_create_comments.rb
-      create    app/models/comment.rb
-      invoke    test_unit
-      create      test/models/comment_test.rb
-      create      test/fixtures/comments.yml
-
+rails generate model Post visit_date:date content:string user_id:integer spot_id:integer score:integer
 ```
 
 ## typeが予約語で使えなかったので、リネーム
