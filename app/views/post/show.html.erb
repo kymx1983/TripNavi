@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="container">
+    <h1>投稿内容</h1>
+
+    <div class="form-group">
+      <h2><label>内容:</label></h2>
+      <div class="input-content">
+        <%= @post.content %>
+      </div>
+    </div>
+
+    <hr>
+    <br>
+    <wrap class="btn btn-flat-border">
+      <%= link_to("編集", "/post/edit/#{@post.id}") %>
+    </wrap>
+
+    <wrap class="btn btn-flat-border">
+      <%= link_to("削除", "/post/destroy/#{@post.id}") %>
+    </wrap>
+
+  </div>
+</div>

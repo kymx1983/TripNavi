@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "spot/edit/:id" => "spot#edit"
   get 'spot/new'
   get "spot/destroy/:id" => "spot#destroy"
+  get "post/show/:id" => "post#show"
   post "spot/create"
   post "spot/update"
   post "post/create"
