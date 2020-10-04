@@ -35,6 +35,9 @@
       <br><br>
       <% @posts.each do |post| %>
         <div><%= post.content %></div>
+        <wrap class="btn btn-flat-border">
+          <%= link_to("詳細", "/post/show/#{post.id}") %>
+        </wrap>
         <hr>
       <% end %>
 
