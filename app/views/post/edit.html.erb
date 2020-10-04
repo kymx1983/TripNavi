@@ -1,2 +1,30 @@
-<h1>Post#edit</h1>
-<p>Find me in app/views/post/edit.html.erb</p>
+<div class="main">
+  <div class="container">
+    <h1>投稿編集</h1>
+
+    <% @post.errors.full_messages.each do |message| %>
+      <div class="form-error">
+        <%= message %>
+      </div>
+    <% end %>
+
+    <%= form_tag("/post/update") do %>
+
+      <input type="hidden" class="input-text" name="id" value="<%= @post.id %>"/>
+
+      <div class="form-group">
+        <h2><label>内容:</label></h2>
+        <div class="input-content">
+          <label>
+            <textarea class="content-area" name="content" rows="3"><%= @post.content %></textarea>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+      <br>
+      <input type="submit" class="btn-flat-border" value="確定">　
+    <% end %>
+    <br><br>
+  </div>
+</div>

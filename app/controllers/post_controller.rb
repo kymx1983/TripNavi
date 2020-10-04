@@ -19,5 +19,18 @@ class PostController < ApplicationController
   end
 
   def edit
+    @post = Post.find_by(id:params[:id])
+  end
+
+  def update
+    @post = Post.find_by(id:params[:id])
+
+    @post.content = params[:content]
+
+    if @post.save
+      redirect_to('/spot/index')
+    else
+      render("post/edit")
+    end
   end
 end
