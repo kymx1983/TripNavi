@@ -7,5 +7,6 @@ class SpotController < ApplicationController
   end
 
   def new
+    @spot = Spot.new
   end
 end

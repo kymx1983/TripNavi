@@ -1,2 +1,45 @@
-<h1>Spot#new</h1>
-<p>Find me in app/views/spot/new.html.erb</p>
+<div class="main">
+  <div class="container">
+    <h1>スポット登録</h1>
+
+    <% @spot.errors.full_messages.each do |message| %>
+      <div class="form-error">
+        <%= message %>
+      </div>
+    <% end %>
+
+    <%= form_tag("/spot/create") do %>
+      <div class="form-group">
+        <h2><label>タイトル:</label></h2>
+        <div class="input-content">
+          <label>
+            <input type="text" class="input-text" name="title"/>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h2><label>概要:</label></h2>
+        <div class="input-content">
+          <label>
+            <textarea class="content-area" name="content" rows="3"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h2><label>住所:</label></h2>
+        <div class="input-content">
+          <label>
+            <input type="text" class="input-text" name="spot_address"/>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+      <br>
+      <input type="submit" class="btn-flat-border" value="確定">　
+    <% end %>
+    <br><br>
+  </div>
+</div>
