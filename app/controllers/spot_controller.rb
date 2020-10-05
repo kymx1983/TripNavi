@@ -35,6 +35,8 @@ class SpotController < ApplicationController
 
     @spot.title = params[:title]
     @spot.content = params[:content]
+    @spot.spot_address = params[:spot_address]
+    @spot.category = params[:category]
 
     if @spot.save
       redirect_to('/spot/index')
