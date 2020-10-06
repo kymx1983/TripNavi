@@ -5,7 +5,9 @@ class PostController < ApplicationController
 
   def create
     @post = Post.new
+    @post.visit_date = params[:visit_date]
     @post.content = params[:content]
+    @post.score = params[:score]
 
     if @post.save
       redirect_to('/spot/index')

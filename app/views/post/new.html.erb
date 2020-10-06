@@ -10,19 +10,28 @@
 
     <%= form_tag("/post/create") do %>
       <div class="form-group">
-        <h2><label>タイトル:</label></h2>
+        <h2><label>訪問日</label></h2>
         <div class="input-content">
           <label>
-            <input type="text" class="input-text" name="title"/>
+            <input type="date" class="input-text" name="visit_date"/>
           </label>
         </div>
       </div>
 
       <div class="form-group">
-        <h2><label>概要:</label></h2>
+        <h2><label>概要</label></h2>
         <div class="input-content">
           <label>
             <textarea class="content-area" name="content" rows="3"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h2><label>評価</label></h2>
+        <div class="input-content">
+          <label>
+            <input type="number" class="input-text" name="score"/>
           </label>
         </div>
       </div>
