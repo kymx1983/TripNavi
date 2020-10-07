@@ -13,10 +13,28 @@
       <input type="hidden" class="input-text" name="id" value="<%= @post.id %>"/>
 
       <div class="form-group">
-        <h2><label>内容:</label></h2>
+        <h2><label>訪問日</label></h2>
         <div class="input-content">
           <label>
-            <textarea class="content-area" name="content" rows="3"><%= @post.content %></textarea>
+            <input type="date" class="input-text" name="visit_date"/>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h2><label>概要</label></h2>
+        <div class="input-content">
+          <label>
+            <textarea class="content-area" name="content" rows="3"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h2><label>評価</label></h2>
+        <div class="input-content">
+          <label>
+            <input type="number" class="input-text" name="score"/>
           </label>
         </div>
       </div>
